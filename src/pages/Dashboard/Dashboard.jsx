@@ -410,7 +410,7 @@ export const Dashboard = () => {
     }
 
     const handleExpenseDelete = async (expenseId) => {
-        const DELETE_EXPENSE = `http://localhost:8080/expenses/${expenseId}`;
+        const DELETE_EXPENSE = `https://expense-tracker-backend-kobn.onrender.com/expenses/${expenseId}`;
         const confirmed = confirm("Are you sure you want to delete this expense? You won't be able to bring it back after that.");
         if(!confirmed) return;
         try {
@@ -440,7 +440,7 @@ export const Dashboard = () => {
     }
 
     const handleAllExpensesDelete = async () => {
-        const DELETE_ALL_EXPENSES = "http://localhost:8080/expenses?confirm=true";
+        const DELETE_ALL_EXPENSES = "https://expense-tracker-backend-kobn.onrender.com/expenses?confirm=true";
         const confirmed = confirm("Are you sure you want to this? This will delete all your expenses and you won't be able to get them back!");
         if(!confirmed) return;
         try {
