@@ -1,18 +1,94 @@
-# React + Vite
+# 💸 Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack expense tracking web application that helps users manage their spending, set budgets, and analyze expenses.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* User authentication (Signup/Login with JWT)
+* Add, update, and delete expenses
+* Set and track monthly budget
+* View recent transactions
+* Category-wise expense breakdown
+* Analytics with charts
+* 🤖 AI-powered financial insights:
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+  * Generates a financial report based on:
 
-Note: This will impact Vite dev & build performances.
+    * Monthly income
+    * Savings goal
+    * Financial priority
+    * User's expense data
+  * Avoids redundant generation by reusing previously generated reports if inputs haven't changed
+* Responsive UI (works on desktop and mobile)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+### Frontend
+
+* React (Vite)
+* CSS Modules
+* React Router
+
+### Backend
+
+* Spring Boot
+* Spring Security (JWT Authentication)
+* MongoDB Atlas
+
+### Deployment
+
+* Frontend: Netlify
+* Backend: Render
+
+---
+
+## 🔗 Live Demo
+
+* Frontend: *(add your Netlify link here)*
+* Backend: *(add your Render link here)*
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
+
+```id="q1a2w3"
+git clone https://github.com/your-username/expense-tracker.git
+cd expense-tracker
+```
+
+---
+
+### 2. Frontend Setup
+
+```id="e4r5t6"
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+### 3. Backend Setup
+
+* Configure MongoDB URI
+* Set JWT secret
+* Run Spring Boot application
+
+---
+
+## 📌 Notes
+
+* Backend may take a few seconds to respond initially (Render free tier sleeps when inactive)
+* Ensure correct CORS configuration for frontend-backend communication
+
+---
+
+## 👨‍💻 Author
+
+Vedansh Paliwal
