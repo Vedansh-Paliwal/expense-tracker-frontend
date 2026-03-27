@@ -4,7 +4,7 @@ import { AuthContext } from "../../context/AuthContext";
 import { Sidebar } from "../../components/Sidebar";
 import styles from "./Profile.module.css";
 
-const GET_USERDETAILS_URL = "https://expense-tracker-backend-kobn.onrender.comhttp://localhost:8080/user/me";
+const GET_USERDETAILS_URL = "https://expense-tracker-backend-kobn.onrender.com/user/me";
 const UPDATE_USER_URL = "https://expense-tracker-backend-kobn.onrender.com/user";
 const DELETE_USER_URL = "https://expense-tracker-backend-kobn.onrender.com/user";
 
