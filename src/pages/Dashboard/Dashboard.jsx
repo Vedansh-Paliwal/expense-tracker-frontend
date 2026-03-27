@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext.jsx";
 
-const ADD_EXPENSE_URL = "http://localhost:8080/expenses";
-const FINANCIAL_ANALYSIS_URL = "http://localhost:8080/ai/financial-analysis";
-const VIEW_BUDGET_URL = "http://localhost:8080/expenses/view-budget";
-const GET_EXPENSES_SUMMARY_URL = "http://localhost:8080/expenses/analytics/summary";
-const GET_EXPENSES_BY_CATEGORY_URL = "http://localhost:8080/expenses/analytics/by-category";
-const EXPORT_URL = "http://localhost:8080/expenses/export";
-const SET_BUDGET_URL = "http://localhost:8080/expenses/set-budget";
+const ADD_EXPENSE_URL = "https://expense-tracker-backend-kobn.onrender.com/expenses";
+const FINANCIAL_ANALYSIS_URL = "https://expense-tracker-backend-kobn.onrender.com/ai/financial-analysis";
+const VIEW_BUDGET_URL = "https://expense-tracker-backend-kobn.onrender.com/expenses/view-budget";
+const GET_EXPENSES_SUMMARY_URL = "https://expense-tracker-backend-kobn.onrender.com/expenses/analytics/summary";
+const GET_EXPENSES_BY_CATEGORY_URL = "https://expense-tracker-backend-kobn.onrender.com/expenses/analytics/by-category";
+const EXPORT_URL = "https://expense-tracker-backend-kobn.onrender.com/expenses/export";
+const SET_BUDGET_URL = "https://expense-tracker-backend-kobn.onrender.com/expenses/set-budget";
 
 export const Dashboard = () => {
     const navigate = useNavigate();
@@ -38,7 +38,7 @@ export const Dashboard = () => {
 
     useEffect( () => {
         const fetchData = async () => {
-            const GET_ALL_EXPENSES_URL = `http://localhost:8080/expenses?page=${currentPage}&size=10`;
+            const GET_ALL_EXPENSES_URL = `https://expense-tracker-backend-kobn.onrender.com/expenses?page=${currentPage}&size=10`;
             try {
                     const budgetResponse = await fetch(VIEW_BUDGET_URL, {
                     method: "GET",
@@ -237,7 +237,7 @@ export const Dashboard = () => {
         }
         const isUpdate = selectedExpenseId !== null;
         const url = isUpdate
-            ? `http://localhost:8080/expenses/${selectedExpenseId}`
+            ? `https://expense-tracker-backend-kobn.onrender.com/expenses/${selectedExpenseId}`
             : ADD_EXPENSE_URL;
         const method = isUpdate ? "PUT" : "POST";
         try {

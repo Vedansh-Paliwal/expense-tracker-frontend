@@ -3,7 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import styles from "./Sidebar.module.css";
 import { AuthContext } from "../context/AuthContext";
 
-const GET_USERDETAILS_URL = "http://localhost:8080/user/me";
+const GET_USERDETAILS_URL = "https://expense-tracker-backend-kobn.onrender.com/user/me";
 
 export const Sidebar = () => {
     const { setIsAuthenticated } = useContext(AuthContext);

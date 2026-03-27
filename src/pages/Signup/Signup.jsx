@@ -2,7 +2,7 @@ import { Navigate, Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import styles from "./Signup.module.css";
 
-const URL = "http://localhost:8080/auth/signup";
+const URL = "https://expense-tracker-backend-kobn.onrender.com/auth/signup";
 
 export const Signup = () => {
     const [formData, setFormData] = useState({

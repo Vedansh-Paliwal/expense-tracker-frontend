@@ -40,7 +40,7 @@ export const Analytics = () => {
             const params = new URLSearchParams();
             if (categoryYear) params.set("year", categoryYear);
             if (categoryMonth) params.set("month", categoryMonth);
-            const GET_EXPENSES_BY_CATEGORY_URL = `http://localhost:8080/expenses/analytics/by-category?${params.toString()}`;
+            const GET_EXPENSES_BY_CATEGORY_URL = `https://expense-tracker-backend-kobn.onrender.com/expenses/analytics/by-category?${params.toString()}`;
             try {
                 const response = await fetch(GET_EXPENSES_BY_CATEGORY_URL, {
                     method: "GET",
@@ -76,7 +76,7 @@ export const Analytics = () => {
     useEffect(() => {
         if (!appliedMonthlyYear) return;
         const fetchMonthly = async () => {
-            const GET_MONTHLY_EXPENSES_BY_YEAR_URL = `http://localhost:8080/expenses/analytics/monthly?year=${appliedMonthlyYear}`;
+            const GET_MONTHLY_EXPENSES_BY_YEAR_URL = `https://expense-tracker-backend-kobn.onrender.com/expenses/analytics/monthly?year=${appliedMonthlyYear}`;
             try {
 
                 const response = await fetch(GET_MONTHLY_EXPENSES_BY_YEAR_URL, {
@@ -118,7 +118,7 @@ export const Analytics = () => {
         if (!appliedStackedYear) return;
         const fetchStacked = async () => {
             try {
-                const response = await fetch(`http://localhost:8080/expenses/analytics/monthly-by-category?year=${appliedStackedYear}`, {
+                const response = await fetch(`https://expense-tracker-backend-kobn.onrender.com/expenses/analytics/monthly-by-category?year=${appliedStackedYear}`, {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${localStorage.getItem("token")}`

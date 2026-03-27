@@ -3,7 +3,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import styles from "./Login.module.css";
 
-const URL = "http://localhost:8080/auth/login";
+const URL = "https://expense-tracker-backend-kobn.onrender.com/auth/login";
 
 export const Login = () => {
   const [formData, setFormData] = useState({login: "",password: ""});

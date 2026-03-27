@@ -31,7 +31,7 @@ export const ExpensesPage = () => {
             params.set(key, value);
         }
     });
-    const GET_ALL_EXPENSES_URL = `http://localhost:8080/expenses?${params.toString()}`;
+    const GET_ALL_EXPENSES_URL = `https://expense-tracker-backend-kobn.onrender.com/expenses?${params.toString()}`;
 
     useEffect(() => {
         const fetchExpenses = async () => {
