@@ -476,7 +476,7 @@ export const Dashboard = () => {
     const budgetPercent = budgetData.budget === 0 ? 0 : Math.min(Math.round((budgetData.totalSpent / budgetData.budget) * 100), 100);
     
     return(
-        <>
+        <div className={styles.layout}>
             <Sidebar />
             <div className={styles.container}>
                 <div className={styles.topBar}>
@@ -522,37 +522,39 @@ export const Dashboard = () => {
                                 <button onClick={() => handleAllExpensesDelete()} className={styles.deleteAllExpenses}>Delete All Expenses</button>
                             </div>
                         </div>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>DESCRIPTION</th>
-                                    <th>CATEGORY</th>
-                                    <th>DATE</th>
-                                    <th>AMOUNT</th>
-                                    <th>PAYMENT METHOD</th>
-                                    <th></th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {expensesData?.content?.length === 0 ? (
+                        <div className={styles.tableWrapper}>
+                            <table>
+                                <thead>
                                     <tr>
-                                        <td colSpan="7">No expenses yet</td>
+                                        <th>DESCRIPTION</th>
+                                        <th>CATEGORY</th>
+                                        <th>DATE</th>
+                                        <th>AMOUNT</th>
+                                        <th>PAYMENT METHOD</th>
+                                        <th></th>
+                                        <th></th>
                                     </tr>
-                                ) : (
-                                    expensesData.content.map((expense) => (
-                                        <tr key={expense.id}>
-                                        <td>{expense.title}</td>
-                                        <td>{expense.category.charAt(0).toUpperCase() + expense.category.slice(1)}</td>
-                                        <td>{expense.date}</td>
-                                        <td>{expense.amount}</td>
-                                        <td>{expense.paymentMethod.toUpperCase()}</td>
-                                        <td><button onClick={() => handleExpenseUpdateClick(expense)} className={styles.updateExpense}>Update</button></td>
-                                        <td><button onClick={() => handleExpenseDelete(expense.id)} className={styles.deleteExpense}>Delete</button></td>
-                                    </tr>
-                                )))}
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+                                    {expensesData?.content?.length === 0 ? (
+                                        <tr>
+                                            <td colSpan="7">No expenses yet</td>
+                                        </tr>
+                                    ) : (
+                                        expensesData.content.map((expense) => (
+                                            <tr key={expense.id}>
+                                            <td>{expense.title}</td>
+                                            <td>{expense.category.charAt(0).toUpperCase() + expense.category.slice(1)}</td>
+                                            <td>{expense.date}</td>
+                                            <td>{expense.amount}</td>
+                                            <td>{expense.paymentMethod.toUpperCase()}</td>
+                                            <td><button onClick={() => handleExpenseUpdateClick(expense)} className={styles.updateExpense}>Update</button></td>
+                                            <td><button onClick={() => handleExpenseDelete(expense.id)} className={styles.deleteExpense}>Delete</button></td>
+                                        </tr>
+                                    )))}
+                                </tbody>
+                            </table>
+                        </div>
                         <div className={styles.pagination}>
                             <button 
                                 className={styles.pageBtn}
@@ -795,6 +797,6 @@ export const Dashboard = () => {
                     </div>
                 )}
             </div>
-        </>
+        </div>
     );
 };

@@ -47,6 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .avatarName {
@@ -89,6 +90,8 @@
     background: white;
     transition: border 0.2s, box-shadow 0.2s;
     max-width: 420px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .formGroup input:focus {
@@ -161,6 +164,7 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
+    padding: 1rem;
 }
 
 .modalContent {
@@ -224,4 +228,30 @@
 
 .confirmDeleteBtn:hover {
     background-color: #dc2626;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+    .container {
+        margin-left: 0;
+        padding-top: 72px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 72px 0.75rem 1rem;
+    }
+
+    .formGroup input {
+        max-width: 100%;
+    }
+
+    .modalContent {
+        padding: 1.25rem;
+    }
+
+    .modalButtons {
+        flex-direction: column;
+    }
 }

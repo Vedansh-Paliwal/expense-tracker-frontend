@@ -4,18 +4,21 @@
     min-height: 100vh;
     background-color: #f5f7fb;
 }
+
 .filters {
     display: flex;
     gap: 1rem;
-    align-items: flex-end; /* aligns inputs nicely */
-    flex-wrap: wrap; /* prevents overflow */
+    align-items: flex-end;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
 .filterItem {
     display: flex;
     flex-direction: column;
 }
+
 .filterItem input,
 .filterItem select {
     padding: 0.5rem 0.75rem;
@@ -27,20 +30,24 @@
     min-width: 120px;
     transition: border 0.2s, box-shadow 0.2s;
 }
+
 .filterItem input:focus,
 .filterItem select:focus {
     outline: none;
     border-color: #6366f1;
     box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
 }
+
 .filterItem label {
     font-size: 0.7rem;
     color: #6b7280;
     margin-bottom: 0.25rem;
 }
+
 .filterItem input[type="number"] {
     width: 100px;
 }
+
 .resetBtn {
     padding: 0.5rem 0.9rem;
     border-radius: 8px;
@@ -51,9 +58,11 @@
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .resetBtn:hover {
     background-color: #dc2626;
 }
+
 .exportBtn {
     padding: 0.5rem 0.9rem;
     border-radius: 8px;
@@ -64,23 +73,29 @@
     cursor: pointer;
     transition: background 0.2s;
 }
+
 .exportBtn:hover {
     background-color: #4f46e5;
 }
+
 .tableWrapper {
     background: white;
     border-radius: 12px;
-    overflow: hidden;
+    overflow-x: auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 560px;
 }
+
 thead {
     width: 100%;
     background-color:#fafafa;
 }
+
 th {
     text-align: left;
     padding: 0.75rem 1.5rem;
@@ -88,12 +103,16 @@ th {
     color: rgb(138, 138, 138);
     border-top: 1px solid #e5e7eb;
     border-bottom: 1px solid #e5e7eb;
+    white-space: nowrap;
 }
+
 td {
     padding: 0.85rem 1.5rem;
     font-size: 0.88rem;
     border-bottom: 1px solid #ededed;
+    white-space: nowrap;
 }
+
 .updateExpense {
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
@@ -105,9 +124,11 @@ td {
     cursor: pointer;
     transition: background-color 0.2s;
 }
+
 .updateExpense:hover {
     background-color: #ddd6fe;
 }
+
 .deleteExpense {
     padding: 0.35rem 0.75rem;
     border-radius: 6px;
@@ -119,12 +140,15 @@ td {
     cursor: pointer;
     transition: background-color 0.2s;
 }
+
 .deleteExpense:hover {
     background-color: #fecaca;
 }
+
 tr:hover td {
     background-color: #e5e5e5;
 }
+
 .pagination {
     display: flex;
     justify-content: center;
@@ -132,6 +156,7 @@ tr:hover td {
     gap: 1rem;
     padding: 1rem;
 }
+
 .pageBtn {
     padding: 0.5rem 1rem;
     border-radius: 8px;
@@ -141,10 +166,35 @@ tr:hover td {
     font-size: 0.85rem;
     font-family: 'DM Sans', sans-serif;
 }
+
 .pageBtn:hover:not(:disabled) {
     background: #f3f4f6;
 }
+
 .pageBtn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+}
+
+/* ── Tablet & Mobile ── */
+@media (max-width: 1024px) {
+    .container {
+        margin-left: 0;
+        padding-top: 72px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 72px 0.75rem 1rem;
+    }
+
+    .filterItem input,
+    .filterItem select {
+        min-width: 100px;
+    }
+
+    .filterItem input[type="number"] {
+        width: 80px;
+    }
 }
