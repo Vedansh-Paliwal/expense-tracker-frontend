@@ -1,0 +1,89 @@
+.container {
+    margin-left: 240px;
+    padding: 1.5rem;
+    min-height: 100vh;
+    background-color: #f5f7fb;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.cardTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.25rem;
+}
+.filters {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end; /* aligns inputs nicely */
+    flex-wrap: wrap; /* prevents overflow */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.filterItem {
+    display: flex;
+    flex-direction: column;
+}
+.filterItem input,
+.filterItem select {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    background-color: white;
+    min-width: 120px;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+.filterItem input:focus,
+.filterItem select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+.filterItem label {
+    font-size: 0.7rem;
+    color: #6b7280;
+    margin-bottom: 0.25rem;
+}
+.filterItem input[type="number"] {
+    width: 100px;
+}
+.applyBtn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #6366f1;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.applyBtn:hover {
+    background-color: #4f46e5;
+}
+.resetBtn {
+    padding: 0.5rem 0.9rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.resetBtn:hover {
+    background-color: #dc2626;
+}

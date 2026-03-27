@@ -1,0 +1,108 @@
+.container {
+    width: 240px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.topPanel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+
+.appTitle {
+    font-weight: 900;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+}
+
+.navSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.sectionLabel {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    opacity: 0.6;
+    padding: 0 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.navItem {
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 500;
+    opacity: 0.85;
+    transition: background 0.2s, opacity 0.2s;
+}
+
+.navItem:hover {
+    background: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+}
+
+.bottomPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.userChip {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.userName {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.userSub {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.22);
+    opacity: 1;
+    font-weight: 600;
+}

@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.leftPanel,
+.rightPanel {
+    flex: 1;
+}
+.leftPanel {
+   background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #9333ea 100%);
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   padding: 3rem;
+}
+.brandContent {
+   max-width: 420px;
+   text-align: left;
+}
+.appTitle {
+   font-size: 3rem;
+   font-weight: 800;
+   letter-spacing: -1px;
+   margin-bottom: 1rem;
+}
+.tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+.rightPanel {
+    background-color: #f5f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.formCard {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px;
+}
+.heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.subText {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.formGroup label {
+    font-weight: 600;
+    color: #374151;
+}
+.formGroup input {
+   padding: 0.75rem 0.9rem;
+   border-radius: 8px;
+   border: 1px solid #d1d5db;
+   font-size: 0.95rem;
+   outline: none;
+   transition: border-color 0.2s ease, box-shadow 0.2s ease;
+   background-color: #f9fafb;
+}
+.formGroup input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+    background-color: white;
+}
+.loginButton {
+   margin-top: 0.5rem;
+   padding: 0.85rem;
+   border-radius: 8px;
+   border: none;
+   font-size: 1rem;
+   font-weight: 600;
+   cursor: pointer;
+   background: linear-gradient(135deg, #7c3aed, #9333ea);
+   color: white;
+   transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+.loginButton:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 18px rgba(124, 58, 237, 0.3);
+}
+.loginButton:active {
+   transform: translateY(0);
+   box-shadow: 0 4px 10px rgba(124, 58, 237, 0.2);
+}
+.switchText {
+   margin-top: 1.5rem;
+   font-size: 0.95rem;
+   color: #6b7280;
+   text-align: center;
+}
+.link {
+   color: #7c3aed;
+   text-decoration: none;
+   font-weight: 600;
+   transition: opacity 0.2s ease;
+}
+.link:hover {
+   opacity: 0.8;
+}
+.errorText {
+   color: #dc2626;
+   font-size: 0.9rem;
+   margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .leftPanel {
+        display: none;
+    }
+    .rightPanel {
+        min-height: 100vh;
+    }
+}

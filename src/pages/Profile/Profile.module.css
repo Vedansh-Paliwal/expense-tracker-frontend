@@ -1,0 +1,227 @@
+.container {
+    margin-left: 240px;
+    padding: 1.5rem;
+    min-height: 100vh;
+    background-color: #f5f7fb;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.pageTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+/* ── Cards ── */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cardTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.25rem;
+}
+
+/* ── Avatar Section ── */
+.avatarSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatarName {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.avatarEmail {
+    font-size: 0.82rem;
+    color: #6b7280;
+    margin-top: 0.15rem;
+}
+
+/* ── Form ── */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.formGroup label {
+    font-size: 0.78rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.formGroup input {
+    padding: 0.55rem 0.85rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    font-size: 0.88rem;
+    font-family: 'DM Sans', sans-serif;
+    background: white;
+    transition: border 0.2s, box-shadow 0.2s;
+    max-width: 420px;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.15);
+}
+
+.updateBtn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #6366f1;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background 0.2s;
+}
+
+.updateBtn:hover {
+    background-color: #4f46e5;
+}
+
+/* ── Feedback ── */
+.error {
+    font-size: 0.83rem;
+    color: #dc2626;
+}
+
+.success {
+    font-size: 0.83rem;
+    color: #16a34a;
+}
+
+/* ── Danger Zone ── */
+.dangerCard {
+    border: 1px solid #fee2e2;
+}
+
+.dangerText {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.deleteBtn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #fee2e2;
+    color: #991b1b;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.deleteBtn:hover {
+    background-color: #fecaca;
+}
+
+/* ── Modal ── */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modalContent {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.modalContent h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.modalContent p {
+    font-size: 0.88rem;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.modalButtons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.cancelBtn {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cancelBtn:hover {
+    background: #f3f4f6;
+}
+
+.confirmDeleteBtn {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.confirmDeleteBtn:hover {
+    background-color: #dc2626;
+}
