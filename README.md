@@ -48,8 +48,8 @@ A full-stack expense tracking web application that helps users manage their spen
 
 ## 🔗 Live Demo
 
-* Frontend: *(add your Netlify link here)*
-* Backend: *(add your Render link here)*
+* Frontend: https://expense-tracker-app-vp.netlify.app/
+* Backend: https://expense-tracker-backend-kobn.onrender.com/
 
 ---
 
